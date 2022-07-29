@@ -1,2 +1,2 @@
-# Quest-es_OBI
+# Questôes_OBI
 Questões da OBI (Olimpíada Brasileira de Informática).
