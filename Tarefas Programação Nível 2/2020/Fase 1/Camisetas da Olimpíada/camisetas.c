@@ -1,24 +1,25 @@
 /*
- * Alonso M.
+ * Alonso Martins.
  * Camisetas de Olimpíada
- * OBI2020 - fase 1
+ * OBI2020 - Fase 1
  */
 #include <stdio.h>
 
 int main()
 {
-    int n, qP, qM, aux, aux2;
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++)
+    int N; // número de premiados
+    int qP; // quantidade de camisetas de tamanho pequeno solicitadas
+    int qM; // quantidade de camisetas de tamanho médio solicitadas
+    int Ti;
+    int P, M; // quantidade de camisetas de tamanhos pequeno e médio produzidas
+    scanf("%d", &N);
+    for (int i = 0; i < N; i++)
     {
-        aux;
-        scanf("%d", &aux);
-        if (aux == 1)
-            qP++;
-        else
-            qM++;
+        scanf("%d", &Ti);
+        if (Ti == 1) qP++;
+        else qM++;
     }
-    scanf("%d %d", &aux, &aux2);
-    printf(qP <= aux && qM <= aux2 ? "S\n" : "N\n");
+    scanf("%d %d", &P, &M);
+    printf(qP <= Ti && qM <= M ? "S\n" : "N\n");
     return 0;
 }
