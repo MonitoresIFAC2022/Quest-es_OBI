@@ -1,8 +1,8 @@
 
 /*
- * Alonso M.
+ * Alonso Martins
  * Acelerador de partículos
- * OBI2020 - fase 1
+ * OBI2020 - Fase 1
  */
 import java.util.*;
 
