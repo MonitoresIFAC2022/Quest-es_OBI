@@ -12,28 +12,38 @@ public class fotografia {
 
         Scanner in = new Scanner(System.in);
 
-        int A = in.nextInt(), L = in.nextInt(), N = in.nextInt(), melhor = -1, areaMel = -1;
-        int[][] molduras = new int[N][2];
+        int A = in.nextInt(), L = in.nextInt(); // dimensões da fotografia
+        int N = in.nextInt();                   // quantidade de molduras disponíveis
+        int melhor = -1;                        // identificador da melhor moldura
+        int areaMel = -1;                       // a menor área da moldura não ocupada pela fotografia
+
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < 2; j++)
-                molduras[i][j] = in.nextInt();
-        }
-        for (int i = 0; i < N; i++) {
-            int molL = molduras[i][0], molA = molduras[i][1];
-            if (A <= molA && L <= molL || A <= molL && L <= molA) {
-                int areaMol = molL * molA - L * A;
+
+            int molL = in.nextInt(), molA = in.nextInt(); // leitura das dimensoes da i-ésima moldura
+
+            if (A <= molA && L <= molL || A <= molL && L <= molA) { // checa se a fotografia cabe na moldura
+
+                int areaMol = molL * molA - L * A; // area da i-ésima moldura não ocupada pela fotografia
+
                 if (areaMel >= 0) {
+
                     if (areaMol < areaMel) {
+
                         areaMel = areaMol;
                         melhor = i + 1;
+
                     }
                 } else {
+
                     melhor = i + 1;
                     areaMel = areaMol;
+
                 }
             }
         }
+
         System.out.println(melhor);
+
         in.close();
     }
 }
