@@ -1,6 +1,6 @@
 /*
  * Alonso Martins
- * Camisetas de Olimpíada
+ * Camisetas da Olimpíada
  * OBI2020 - Fase 1
  */
 #include <stdio.h>
