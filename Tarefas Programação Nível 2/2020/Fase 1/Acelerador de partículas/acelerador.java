@@ -1,7 +1,7 @@
 
 /*
  * Alonso Martins
- * Acelerador de partículos
+ * Acelerador de partículas
  * OBI2020 - Fase 1
  */
 import java.util.*;
