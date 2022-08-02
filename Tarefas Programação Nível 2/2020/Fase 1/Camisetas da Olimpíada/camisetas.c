@@ -10,7 +10,7 @@ int main()
     int N; // número de premiados
     int qP; // quantidade de camisetas de tamanho pequeno solicitadas
     int qM; // quantidade de camisetas de tamanho médio solicitadas
-    int Ti;
+    int Ti; // tamanhos solicitados pelos premiados
     int P, M; // quantidade de camisetas de tamanhos pequeno e médio produzidas
     scanf("%d", &N);
     for (int i = 0; i < N; i++)
