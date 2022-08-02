@@ -1,5 +1,5 @@
 /*
- * Alonso Martins.
+ * Alonso Martins
  * Camisetas de Olimpíada
  * OBI2020 - Fase 1
  */
