@@ -1,8 +1,9 @@
 
 /*
  * Alonso Martins
- * Ralourim
- * OBI2020 - fase 1
+ * Ralouim
+ * OBI2020 - Fase 1
+ * (Obs: Os resultados nem sempre são corretos)
  */
 import java.util.*;
 
@@ -12,16 +13,18 @@ public class ralouim {
 
         Scanner in = new Scanner(System.in);
 
-        int n = in.nextInt(), doces = 0;
-        int tendaAtual = 0;
-        int tendaMaisLonge = 0;
+        int N = in.nextInt(); // número de tendas
+        int guloseimas = 0; // maior número de guloseimas que Pedrinho pode ganhar
+        int tendaAtual = 0; // tenda atual em que Pedrinho está
+        int tendaMaisLonge = 0; // tenda mais longe da tenda atual
 
-        double maiorD = 0.0;
+        double maiorD = 0.0; 
         double dAnterior = 0.0;
+        int X = 0, Y = 1;
 
-        double[][] tendas = new double[n][2];
+        double[][] tendas = new double[N][2]; // coordenadas de cada tenda
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < N; i++) {
 
             for (int j = 0; j < 2; j++) {
 
@@ -29,8 +32,8 @@ public class ralouim {
 
             }
 
-            double x = tendas[i][0];
-            double y = tendas[i][1];
+            double x = tendas[i][X];
+            double y = tendas[i][Y];
             double d = Math.sqrt(x * x + y * y);
 
             if (d > maiorD) {
@@ -44,19 +47,19 @@ public class ralouim {
 
         tendaAtual = tendaMaisLonge;
         dAnterior = maiorD;
-        doces++;
+        guloseimas++;
         System.out.println("Maior d: "+maiorD);
 
         while (true) {
 
             maiorD = 0.0;
 
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < N; i++) {
 
-                double x0 = tendas[tendaAtual][0];
-                double y0 = tendas[tendaAtual][1];
-                double x1 = tendas[i][0];
-                double y1 = tendas[i][1];
+                double x0 = tendas[tendaAtual][X];
+                double y0 = tendas[tendaAtual][Y];
+                double x1 = tendas[i][X];
+                double y1 = tendas[i][Y];
 
                 double d = Math.sqrt((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0));
                 System.out.println("i: "+i+" -> "+d);
@@ -75,11 +78,11 @@ public class ralouim {
 
             dAnterior = maiorD;
             tendaAtual = tendaMaisLonge;
-            doces++;
+            guloseimas++;
 
         }
 
-        System.out.println(doces);
+        System.out.println(guloseimas);
 
         in.close();
     }
