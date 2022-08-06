@@ -6,12 +6,22 @@
  */
 #include <stdio.h>
 #include <math.h>
+int divisores[1000000000][200] = {};
 
-int eh_candidata (int v[], int n) { // verifica se a subsequência é candidata 
-    if (n == 1) return 0;
-    int divisores[n][1000];
-    for (int i = 0; i < n; i ++) {
-        
+int eh_candidata(int v[], int n) // verifica se a subsequência é candidata
+{
+    if (n == 1)
+        return 0;
+    for (int i = 0; i < n; i++)
+    {
+        int aux = sqrt(v[i]);
+        aux += aux * aux == v[i] ? 1 : 0;
+        for (int j = 1; j < aux; j++)
+        {
+            if (!(v[i] % j)) {
+                
+            }
+        }
     }
     return 0;
 }
@@ -21,8 +31,9 @@ int candidatas(int N, int S[N], int E, int D) // retorna o número de subsequên
     int total = 0;
     for (int i = E - 1; i < D; i++)
     {
-        int subseq[D-E+1], cont = 0;
-        for (int j = i + 1; j < D; i ++) {
+        int subseq[D - E + 1], cont = 0;
+        for (int j = i + 1; j < D; i++)
+        {
             subseq[cont++] = S[j];
             total += eh_candidata(subseq, cont);
         }
