@@ -1,3 +1,8 @@
+/*
+ * Alonso Martins
+ * Conversa não tão secreta
+ * OBI2006 - Fase 1
+*/
 #include <stdio.h>
 
 void limpar(int l, int c, int m[l][c]); // método para limpar as posições de uma matriz
