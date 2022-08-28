@@ -1,7 +1,7 @@
 /*
- * Alonso Martins
  * Monopólio
  * OBI2006 - Fase 1
+ * Alonso Martins
  */
 #include <stdio.h>
 
